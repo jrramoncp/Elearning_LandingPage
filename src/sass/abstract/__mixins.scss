@@ -1,6 +1,6 @@
 @use '../abstract/_variables' as v;
 
-@mixin reset-list(){
+@mixin reset_list(){
     display: flex;
     list-style-type: none;
     gap: 56px;
@@ -8,6 +8,42 @@
     li{
         a{
             text-decoration: none;
+        }
+    }
+}
+
+// BUTTONS
+@mixin button_style($type){
+    display: inline-block;
+    border-radius: 28px;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: v.$font_bold;
+    color: v.$white_color;
+    transition: 0.5s ease;
+
+    @if $type == "button_one"{
+        background-color: v.$navy_color; 
+        transition: 0.5s ease;
+        &:hover{
+            background-color: v.$bluePurple_color;
+        }
+    }
+
+    @else if $type == "button_two"{
+        background: v.$gradient_one;
+        transition: 0.5s ease;
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+
+    @else if $type == "button_three"{
+        background: v.$gradient_two;
+        transition: 0.5s ease;
+        &:hover{
+            opacity: 0.5;
         }
     }
 }

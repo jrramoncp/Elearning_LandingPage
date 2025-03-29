@@ -1,4 +1,5 @@
 @use "abstract/_variables" as v;
+@use "abstract/_mixins" as m;
 @use "abstract/_tipography";
 @use "layout/layout";
 
@@ -9,15 +10,13 @@
     box-sizing: border-box;
     font-size: 18px;
     font-family: v.$primary-font;
+    font-weight: v.$font_medium;
 }
 
 //BASE STYLES
 
-body{
-    background-image: linear-gradient(to right, white 50%, v.$background-secondary-color 50% 100%);
-}
+
 .page{
-    max-width: 1400px;
     padding-left: 16px;
     padding-right: 16px;
     margin-right: auto;
