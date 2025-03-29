@@ -1,16 +1,19 @@
 @use '../abstract/_variables' as v;
 
-@mixin reset_list(){
-    display: flex;
-    list-style-type: none;
-    gap: 56px;
-    align-items: center;
-    li{
-        a{
-            text-decoration: none;
-        }
+
+//MEDIA QUERIES
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 1441px) { @content; }
+    } @else if $point == laptop {
+      @media (max-width: 1440px) and (min-width: 1025px) { @content; }
+    } @else if $point == tablet {
+      @media (max-width: 1024px) and (min-width: 768px) { @content; }
+    } @else if $point == mobile {
+      @media (max-width: 767px) { @content; }
     }
-}
+  }
+
 
 // BUTTONS
 @mixin button_style($type){
@@ -44,6 +47,18 @@
         transition: 0.5s ease;
         &:hover{
             opacity: 0.5;
+        }
+    }
+}
+
+//LIST RESET
+@mixin reset_list(){
+    list-style-type: none;
+    gap: 16px;
+    align-items: center;
+    li{
+        a{
+            text-decoration: none;
         }
     }
 }
