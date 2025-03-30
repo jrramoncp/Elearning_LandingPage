@@ -1,3 +1,90 @@
 @use '../abstract/_variables' as v;
 @use '../abstract/_mixins' as m;
 
+header.header{
+    padding-top: 16px;
+    padding-bottom: 50px;
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 38px;
+        .button_one{
+            @include m.button_style("button_one");
+        }
+    }
+
+    .hero{
+
+        .hero__content{
+            padding-bottom: 16px;
+            .title{
+                font-weight: v.$font-extra_bold;
+                font-size: 40px;
+            }
+            p{
+                font-size: 16px;
+                color: v.$grey_color;
+                padding-bottom: 24px; 
+            }
+            
+            .button_two{
+                @include m.button_style("button_two");
+            }
+        }
+
+        .hero__img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .float__one{
+                background-color: v.$white-color;
+                position: absolute;
+                right: 0;
+                top: -18px;
+                padding: 23px;
+                border-radius: 10px;
+                box-shadow: 0px 34px 54px 0px rgba(6, 22, 141, 0.16);
+                p{
+                    font-size: 14px;
+                    font-weight: v.$font-bold;
+                    color: v.$grey_color;
+                }
+                h3{
+                    font-size: 32px;
+                    font-weight: v.$font-extra_bold;
+                }
+            }
+
+            .float__two{
+                position: absolute;
+                bottom: -26px;
+                left: 0;
+                padding: 23px;
+                padding-right: 40px;
+                border-radius: 10px;
+                background-color: v.$white-color;
+                box-shadow: 0px 34px 54px 0px rgba(6, 22, 141, 0.16);;
+                p{
+                    font-size: 14px;
+                    font-weight: v.$font-bold;
+                    color: v.$grey_color;
+                }
+                h3{
+                    font-size: 32px;
+                    font-weight: v.$font-extra_bold;
+                }
+            }
+            picture{
+                img{
+                    max-width: 250px;
+                    
+                }
+            }
+
+        }
+    }
+    
+
+}
