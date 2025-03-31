@@ -8,7 +8,7 @@ main{
         flex-direction: column;
         gap: 40px;
         padding-bottom: 50px;
-        background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);;
+        background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
 
         @include m.breakpoint("tablet"){
             flex-direction: row;
@@ -16,6 +16,15 @@ main{
             justify-content: space-evenly;
             align-items: center;
         }
+
+        @include m.breakpoint("laptop"){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            background: none;
+        }
+
         .highlight{
             background: v.$gradient_one;
             border-radius: 10px;
@@ -26,6 +35,9 @@ main{
                 font-weight: v.$font_extra_bold;
                 line-height: 32px;
                 
+                @include m.breakpoint("laptop"){
+                    font-size: 28px;
+                }
                 
             }
 
@@ -33,6 +45,12 @@ main{
                 padding-top: 50px;
                 padding-bottom: 150px;
                 max-width: 45%;
+            }
+
+            @include m.breakpoint("laptop"){
+                padding-top: 50px;
+                padding-bottom: 150px;
+                max-width: 30%;
             }
         }
         .content__article{ 
@@ -54,6 +72,9 @@ main{
                 font-weight: v.$font-extra_bold;
                 margin-bottom: 16px;
                 padding-top: 30px;
+                @include m.breakpoint("laptop"){
+                    font-size: 24px;
+                }
             }
 
             p{
@@ -61,6 +82,9 @@ main{
                 color: v.$grey_color;
                 line-height: 26px;
                 margin-bottom: 24px;
+                @include m.breakpoint("laptop"){
+                    font-size: 18px;
+                }
             }
 
             a{
@@ -68,10 +92,19 @@ main{
                  font-weight: v.$font-bold;
                  color: v.$darkPink_color;
                  text-decoration: none;
+
+                 &:hover{
+                    color: v.$lightPink-color;
+                 }
             }
 
             @include m.breakpoint("tablet"){
                 max-width: 45%;
+            }
+
+            @include m.breakpoint("laptop"){
+                max-width: 30%;
+
             }
         }
 
