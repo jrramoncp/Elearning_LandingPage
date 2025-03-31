@@ -17,6 +17,13 @@
 
 body{
     background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+    @include m.breakpoint(tablet){
+        
+        background-image: url(/img/hero-img.png);
+        background-repeat: no-repeat;
+        background-size: 350px;
+        background-position: right -50px top 50px;
+    };
 }
 
 .page{
