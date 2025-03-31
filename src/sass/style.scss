@@ -15,9 +15,11 @@
 
 //BASE STYLES
 
+body{
+    background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+}
 
 .page{
-    max-width: 700px;
     padding-left: 16px;
     padding-right: 16px;
     margin-right: auto;

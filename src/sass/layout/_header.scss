@@ -21,11 +21,13 @@ header.header{
             .title{
                 font-weight: v.$font-extra_bold;
                 font-size: 40px;
+                color: v.$navy-color;
+                margin-bottom: 26px;
             }
             p{
                 font-size: 16px;
                 color: v.$grey_color;
-                padding-bottom: 24px; 
+                padding-bottom: 24px;  
             }
             
             .button_two{
@@ -76,12 +78,12 @@ header.header{
                     font-weight: v.$font-extra_bold;
                 }
             }
-            picture{
-                img{
-                    max-width: 250px;
+           
+            img{
+                max-width: 70%;
                     
-                }
             }
+            
 
         }
     }

@@ -1,2 +1,13 @@
 @use '../abstract/_variables' as v;
 @use '../abstract/_mixins' as m;
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: v.$navy-color;
+    padding: 30px;
+    margin: -16px;
+    .button_three{
+        @include m.button_style("button_three");
+    }
+}
