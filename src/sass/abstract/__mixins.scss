@@ -6,7 +6,7 @@
     @if $point == desktop {
       @media (min-width: 1441px) { @content; }
     } @else if $point == laptop {
-      @media (max-width: 1440px) and (min-width: 1025px) { @content; }
+      @media (max-width: 1440px) and (min-width:1025px ) { @content; }
     } @else if $point == tablet {
       @media (max-width: 1024px) and (min-width: 768px) { @content; }
     } @else if $point == mobile {

@@ -23,6 +23,13 @@ body{
         background-size: 350px;
         background-position: right -50px top 50px;
     };
+
+    @include m.breakpoint(laptop){
+        background: url(/img/hero-img.png);
+        background-repeat: no-repeat;
+        background-size: 500px;
+        background-position: right -50px top -30px;
+    };
 }
 
 .page{
@@ -30,4 +37,8 @@ body{
     padding-right: 16px;
     margin-right: auto;
     margin-left: auto;
+
+    @include m.breakpoint("laptop"){
+        max-width: 900px;
+    }
 }
