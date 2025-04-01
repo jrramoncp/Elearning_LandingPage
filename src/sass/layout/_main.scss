@@ -25,6 +25,14 @@ main{
             background: none;
         }
 
+        @include m.breakpoint("desktop"){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+        }
+
         .highlight{
             background: v.$gradient_one;
             border-radius: 10px;
@@ -37,6 +45,11 @@ main{
                 
                 @include m.breakpoint("laptop"){
                     font-size: 28px;
+                }
+                
+                @include m.breakpoint("desktop"){
+                    font-size: 32px;
+                    line-height: 40px;
                 }
                 
             }
@@ -52,12 +65,25 @@ main{
                 padding-bottom: 150px;
                 max-width: 30%;
             }
+            @include m.breakpoint("desktop"){
+                padding-top: 50px;
+                padding-bottom: 0px;
+                max-width: 30%;
+                width: 350px;
+                height: 300px;
+            }
         }
         .content__article{ 
             background-color: v.$white-color;
             padding: 20px 20px;
             border-radius: 10px;
             position: relative;
+            @include m.breakpoint("desktop"){
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
             img{
                 background: v.$gradient_one;
                 padding: 12px;
@@ -75,6 +101,10 @@ main{
                 @include m.breakpoint("laptop"){
                     font-size: 24px;
                 }
+
+                @include m.breakpoint("desktop"){
+                    font-size: 24px;
+                }
             }
 
             p{
@@ -84,6 +114,10 @@ main{
                 margin-bottom: 24px;
                 @include m.breakpoint("laptop"){
                     font-size: 18px;
+                }
+                @include m.breakpoint("desktop"){
+                    font-size: 18px;
+                    margin-bottom: 0;
                 }
             }
 
@@ -105,6 +139,11 @@ main{
             @include m.breakpoint("laptop"){
                 max-width: 30%;
 
+            }
+            @include m.breakpoint("desktop"){
+                max-width: 30%;
+                width: 350px;
+                height: 300px;
             }
         }
 

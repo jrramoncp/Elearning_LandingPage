@@ -18,7 +18,14 @@ html{
     @include m.breakpoint("laptop"){
         background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
     }
+    @include m.breakpoint("desktop"){
+        background: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+    }
 }
+
+
+
+
 body{
     
     @include m.breakpoint("tablet"){
