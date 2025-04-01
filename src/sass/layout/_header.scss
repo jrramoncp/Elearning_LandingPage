@@ -4,10 +4,13 @@
 header.header{
     padding-top: 16px;
     padding-bottom: 50px;
-    @include m.breakpoint(tablet){
+    @include m.breakpoint("tablet"){
         padding-bottom: 150px;
     }
-    @include m.breakpoint(laptop){
+    @include m.breakpoint("laptop"){
+        padding-bottom: 150px;
+    }
+    @include m.breakpoint("desktop"){
         padding-bottom: 150px;
     }
     .logo{
@@ -24,6 +27,9 @@ header.header{
         @include m.breakpoint("laptop"){
             padding-bottom: 150px ;
         }
+        @include m.breakpoint("desktop"){
+            padding-bottom: 200px ;
+        }
     }
 
     .hero{
@@ -31,6 +37,9 @@ header.header{
             display: flex;
         }
         @include m.breakpoint("laptop"){
+            display: flex;
+        }
+        @include m.breakpoint("desktop"){
             display: flex;
         }
         .hero__content{
@@ -42,6 +51,9 @@ header.header{
                 max-width: 53%;
             }
 
+            @include m.breakpoint("desktop"){
+                max-width: 50%;
+            }
             .title{
                 font-weight: v.$font-extra_bold;
                 font-size: 40px;
@@ -49,6 +61,10 @@ header.header{
                 margin-bottom: 26px;
                 @include m.breakpoint("laptop"){
                     font-size: 56px;
+                }
+                @include m.breakpoint("desktop"){
+                    font-size: 56px;
+                    max-width: 80%;
                 }
 
             }
@@ -58,6 +74,10 @@ header.header{
                 padding-bottom: 24px;  
                 @include m.breakpoint("laptop"){
                     font-size: 18px;
+                }
+                @include m.breakpoint("desktop"){
+                    font-size: 18px;
+                    max-width: 50%;
                 }
             }
             
@@ -71,6 +91,7 @@ header.header{
             justify-content: center;
             align-items: center;
             position: relative;
+
             .float__one{
                 width: 105px;
                 height: 100px;
@@ -93,6 +114,13 @@ header.header{
                     padding-right: 30px;
                 }
 
+                @include m.breakpoint("desktop"){
+                    left: 680px;
+                    top: -30px;
+                    width: fit-content;
+                }
+                    
+
 
 
                 p{
@@ -102,6 +130,9 @@ header.header{
                     @include m.breakpoint("laptop"){
                         font-size: 14px;
                     }
+                    @include m.breakpoint("desktop"){
+                        font-size: 16px;
+                    }
                 }
                 h3{
                     font-size: 32px;
@@ -109,6 +140,9 @@ header.header{
 
                     @include m.breakpoint("laptop"){
                         font-size: 36px;
+                    }
+                    @include m.breakpoint("desktop"){
+                        font-size: 40px;
                     }
                 }
             }
@@ -135,24 +169,43 @@ header.header{
                     bottom: 30px;
                 }
 
+                @include m.breakpoint("desktop"){
+                    left: 300px;
+                    bottom: 20px;
+                    width: 199px;
+                    height: 120px;
+                }
+
 
                 p{
                     font-size: 14px;
                     font-weight: v.$font-bold;
                     color: v.$grey_color;
+                    @include m.breakpoint("desktop"){
+                        font-size: 16px;
+                        
+                        
+                    }
                 }
                 h3{
                     font-size: 32px;
                     font-weight: v.$font-extra_bold;
+                    @include m.breakpoint("desktop"){
+                        font-size: 40px;
+                        
+                    }
                 }
             }
            
             img{
                 max-width: 70%;
-                @include m.breakpoint(tablet){
+                @include m.breakpoint("tablet"){
                     display: none;
                 }
-                @include m.breakpoint(laptop){
+                @include m.breakpoint("laptop"){
+                    display: none;
+                }
+                @include m.breakpoint("desktop"){
                     display: none;
                 }
             }

@@ -21,18 +21,25 @@ html{
 }
 body{
     
-    @include m.breakpoint(tablet){
+    @include m.breakpoint("tablet"){
         background: url(/img/hero-img.png);
         background-repeat: no-repeat;
         background-size: 350px;
         background-position: right -50px top 50px;
     };
 
-    @include m.breakpoint(laptop){
+    @include m.breakpoint("laptop"){
         background: url(/img/hero-img.png);
         background-repeat: no-repeat;
         background-size: 500px;
         background-position: right -50px top -30px;
+    };
+
+    @include m.breakpoint("desktop"){
+        background: url(/img/hero-img.png);
+        background-repeat: no-repeat;
+        background-size: 600px;
+        background-position: right top -30px;
     };
 }
 
@@ -44,5 +51,9 @@ body{
 
     @include m.breakpoint("laptop"){
         max-width: 900px;
+    }
+
+    @include m.breakpoint("desktop"){
+        max-width: 1400px;
     }
 }
