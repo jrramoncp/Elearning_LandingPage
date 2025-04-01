@@ -19,9 +19,9 @@ footer{
     }
 
     @include m.breakpoint("desktop"){
-        margin-right: -268px;
-        margin-left: -269px;
-        padding-right: 268px;
-        padding-left: 269px;
+        width: 140.1%;
+        margin-left: -280px;
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }
